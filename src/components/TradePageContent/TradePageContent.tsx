@@ -12,7 +12,7 @@ import styles from "./TradePageContent.module.scss";
 
 export default function TradePageContent(data: { pages: CryptoAsset[] }) {
   const assets = data?.pages.flat() ?? [];
-  const [selectedId, setSelectedId] = useState(assets?.[0]?.id ?? "");
+  const [selectedId, setSelectedId] = useState("");
   const [swapMode, setSwapMode] = useState<SwapMode>(SwapMode.CryptoToFiat);
   const [cryptoInput, setCryptoInput] = useState("");
   const [fiatInput, setFiatInput] = useState("");
@@ -21,6 +21,12 @@ export default function TradePageContent(data: { pages: CryptoAsset[] }) {
     () => assets?.find((a) => a.id === selectedId),
     [selectedId, assets],
   );
+
+  useEffect(() => {
+    if (assets.length > 0 && !selectedId) {
+      setSelectedId(assets[0].id);
+    }
+  }, [assets, selectedId]);
 
   // Update inputs based on swap mode and price
   useEffect(() => {
