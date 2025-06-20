@@ -8,6 +8,15 @@ This is a cryptocurrency trading application built with **React**, **TypeScript*
 https://harutyunyanarpi.github.io/Crypto-Trading-App/
 ---
 
+---
+
+> ⚠️ **Note on CoinGecko API**:  
+> This app uses the public CoinGecko API, which has **rate limits**.  
+> If too many requests are made in a short time, the API may **temporarily block access**.  
+> Please avoid excessive refreshing or repeated actions during testing.
+
+---
+
 ##  Features
 
 - Local login system with simulated authentication (no backend)
