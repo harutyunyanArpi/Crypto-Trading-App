@@ -1,0 +1,26 @@
+@use "./variables" as v;
+@use "./typography" as t;
+@use "./mixins";
+
+/* ----------------------------
+   Reset basic browser styles
+----------------------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: t.$font-size-base;
+  line-height: t.$line-height-base;
+  color: v.$text-color;
+  background-color: v.$background-color;
+}

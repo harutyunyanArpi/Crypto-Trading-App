@@ -1,0 +1,62 @@
+@use "sass:color";
+@use "@/styles/variables" as v;
+@use "@/styles/typography" as t;
+
+.header {
+  background-color: v.$color-primary;
+  padding: 1rem 0;
+  color: v.$color-white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+
+  a {
+    color: v.$color-white;
+    font-size: t.$font-size-lg;
+    font-weight: t.$font-weight-medium;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: color.adjust(#0094ff, $lightness: 20%);
+    }
+  }
+}
+
+.active {
+  border-bottom: 2px solid v.$color-white;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.loginBtn {
+  background-color: v.$color-white;
+  color: #0094ff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: t.$font-weight-medium;
+  border-radius: v.$radius-sm;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: color.adjust(v.$color-white, $lightness: -5%);
+  }
+}

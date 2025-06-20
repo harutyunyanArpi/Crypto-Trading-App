@@ -1,0 +1,9 @@
+@use "@/styles/variables" as v;
+
+.cryptoSelect {
+  padding: 0.5rem;
+  border-radius: v.$radius-sm;
+  border: 1px solid v.$border-color;
+  background-color: v.$color-white;
+  font-weight: 500;
+}

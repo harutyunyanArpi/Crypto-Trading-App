@@ -1,0 +1,89 @@
+@use "@/styles/variables" as v;
+@use "@/styles/mixins" as m;
+@use "@/styles/typography" as t;
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(v.$color-black, 0.6);
+  z-index: 1000;
+  @include m.flex-center;
+}
+
+.modal {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  position: relative;
+  @include m.card;
+
+  color: v.$text-color;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: v.$text-muted;
+  cursor: pointer;
+
+  &:hover {
+    color: v.$color-black;
+  }
+}
+
+h2 {
+  font-size: t.$font-size-xl;
+  font-weight: t.$font-weight-semibold;
+  line-height: t.$line-height-heading;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid v.$border-color;
+    border-radius: v.$radius-md;
+
+    @include t.input-text;
+
+    &:focus {
+      border-color: v.$color-primary;
+      outline: none;
+    }
+  }
+
+  button {
+    padding: 0.75rem;
+    background-color: v.$color-primary;
+    color: v.$color-white;
+    border: none;
+    border-radius: v.$radius-md;
+    font-weight: t.$font-weight-medium;
+    font-size: t.$font-size-base;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: v.$color-primary-hover;
+    }
+
+    &:disabled {
+      background-color: v.$color-gray-300;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.error {
+  @include t.caption;
+  color: v.$color-error;
+  margin-bottom: 1rem;
+}

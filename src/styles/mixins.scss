@@ -1,0 +1,13 @@
+@use "@/styles/variables" as v;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card {
+  border-radius: v.$radius-lg;
+  box-shadow: v.$box-shadow-light;
+  background-color: v.$color-white;
+}

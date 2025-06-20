@@ -1,0 +1,63 @@
+@use "@/styles/variables" as v;
+
+.avatarWrapper {
+  position: relative;
+}
+
+.avatarButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: auto;
+
+  .userIcon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: v.$background-color;
+  border: 1px solid v.$border-color;
+  border-radius: v.$radius-md;
+  box-shadow: v.$box-shadow-light;
+  min-width: 120px;
+  padding: 0.5rem 0;
+  z-index: 10;
+}
+
+.dropdownItem {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: v.$text-color;
+
+  &:hover {
+    background-color: v.$color-gray-100;
+  }
+
+  &.nonInteractive {
+    cursor: default;
+    pointer-events: none;
+    color: v.$text-color;
+    background: none;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.dropdownDivider {
+  border: 0.1px solid v.$color-gray-100;
+}
