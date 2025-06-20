@@ -77,7 +77,9 @@ const CryptoTable: FC<Props> = ({
             </tr>
           ) : assets.length === 0 ? (
             <tr>
-              <td colSpan={3}>No data available.</td>
+              <td colSpan={3} className={styles.noDataContainer}>
+                No data available.
+              </td>
             </tr>
           ) : (
             assets.map((asset) => (
