@@ -99,22 +99,7 @@ cp .env.example .env
 npm run dev
 
 Visit `http://localhost:5173` to view the app.
-
-
----
-
-## Usage
-
-1. **Log In** with any email
-2. On **Home Page**:
-   - View 10 assets
-   - Sort by name or price
-   - Load more assets
-   - Use Buy/Sell dropdown
-3. On **Trade Page**:
-   - Convert crypto ⇄ fiat
-   - Swap inputs
-   - Live rate updates
+```
 
 ---
 
