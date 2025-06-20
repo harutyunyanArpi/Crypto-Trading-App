@@ -1,6 +1,5 @@
 @use "sass:color";
 @use "@/styles/variables" as v;
-@use "@/styles/mixins" as m;
 
 .tableWrapper {
   margin: 1.5rem;
@@ -49,4 +48,8 @@
   &:hover {
     background-color: color.adjust(v.$color-primary, $lightness: -10%);
   }
+}
+
+.noDataContainer {
+  text-align: center;
 }
