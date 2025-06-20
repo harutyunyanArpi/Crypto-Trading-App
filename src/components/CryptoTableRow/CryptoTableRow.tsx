@@ -27,7 +27,7 @@ const CryptoTableRow: FC<Props> = ({ asset }) => {
         </div>
       </td>
       <td>${asset.current_price?.toLocaleString()}</td>
-      <td>
+      <td className="flex-center">
         <ActionMenu
           actions={[
             { label: "Buy", onClick: () => handleBuy(asset) },

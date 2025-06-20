@@ -1,6 +1,6 @@
 @use "./variables" as v;
 @use "./typography" as t;
-@use "./mixins";
+@use "./mixins" as m;
 
 /* ----------------------------
    Reset basic browser styles
@@ -23,4 +23,8 @@ body {
   line-height: t.$line-height-base;
   color: v.$text-color;
   background-color: v.$background-color;
+}
+
+.flex-center {
+  @include m.flex-center;
 }
