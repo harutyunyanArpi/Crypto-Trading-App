@@ -4,8 +4,12 @@ export function sortByField<T>(
   direction: "asc" | "desc",
 ): T[] {
   return [...data].sort((a, b) => {
-    const aVal = String(a[field]).toLowerCase?.() ?? a[field];
-    const bVal = String(b[field]).toLowerCase?.() ?? b[field];
+    const aVal = isNaN(Number(a[field]))
+      ? String(a[field]).toLowerCase()
+      : Number(a[field]);
+    const bVal = isNaN(Number(b[field]))
+      ? String(b[field]).toLowerCase()
+      : Number(b[field]);
 
     if (aVal < bVal) return direction === "asc" ? -1 : 1;
     if (aVal > bVal) return direction === "asc" ? 1 : -1;

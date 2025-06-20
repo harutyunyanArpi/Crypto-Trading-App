@@ -65,7 +65,9 @@ const CryptoTable: FC<Props> = ({
               sortDirection={sortDirection}
               onSort={onSort}
             />
-            <th>Buy/Sell</th>
+            <th>
+              <div className="flex-center">Buy/Sell</div>
+            </th>
           </tr>
         </thead>
         <tbody>

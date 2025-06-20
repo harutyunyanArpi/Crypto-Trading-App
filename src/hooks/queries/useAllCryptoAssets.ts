@@ -17,7 +17,7 @@ export function useAllCryptoAssets(customParams?: Partial<CryptoApiParams>) {
     queryKey: ["crypto-assets", "all"],
     queryFn: async () => {
       const response = await getCryptoAssets(mergedParams);
-      return { pages: [response] };
+      return { pages: [response.data] };
     },
   });
 

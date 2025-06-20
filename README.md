@@ -73,7 +73,7 @@ src/
 ├── store/            # Zustand auth state
 ├── hooks/            # React Query hooks
 ├── routes/           # App routing + protection
-├── services/         # For API interaction logic, reusable across features
+├── services/         # Reusable service for crypto-related API requests
 ├── utils/            # Utils for the app
 ├── enums/            # All the global enums
 ├── types/            # All the global types

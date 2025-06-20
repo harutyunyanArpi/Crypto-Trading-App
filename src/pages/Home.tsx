@@ -18,8 +18,7 @@ const HomePage = () => {
   const flatAssets = useMemo(() => data?.pages.flat() ?? [], [data]);
 
   const sortedAssets = useMemo(() => {
-    const direction = sortOrder === SortDirection.Asc ? "asc" : "desc";
-    return sortByField<CryptoAsset>(flatAssets, sortBy, direction);
+    return sortByField<CryptoAsset>(flatAssets, sortBy, sortOrder);
   }, [flatAssets, sortBy, sortOrder]);
 
   return (

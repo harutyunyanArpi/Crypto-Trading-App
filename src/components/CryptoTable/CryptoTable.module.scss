@@ -2,14 +2,14 @@
 @use "@/styles/variables" as v;
 
 .tableWrapper {
-  margin: 1.5rem;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   background-color: v.$color-white;
   border-radius: v.$radius-md;
   box-shadow: v.$box-shadow-light;
   overflow: auto;
-  max-height: 800px;
+  max-width: 600px;
 }
 
 .table {

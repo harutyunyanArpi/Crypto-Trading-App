@@ -18,10 +18,12 @@ export function usePaginatedCryptoAssets(
   const query = useInfiniteQuery({
     queryKey: ["crypto-assets", mergedParams],
     queryFn: async ({ pageParam = 1 }) => {
-      return await getCryptoAssets({
+      const response = await getCryptoAssets({
         ...mergedParams,
         page: pageParam,
       });
+
+      return response.data;
     },
     getNextPageParam: (lastPage, allPages) =>
       lastPage.length > 0 ? allPages.length + 1 : undefined,
