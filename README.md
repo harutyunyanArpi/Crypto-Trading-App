@@ -5,7 +5,7 @@ This is a cryptocurrency trading application built with **React**, **TypeScript*
 ---
 
 **Live Demo**:
-
+https://harutyunyanarpi.github.io/Crypto-Trading-App/
 ---
 
 ##  Features
