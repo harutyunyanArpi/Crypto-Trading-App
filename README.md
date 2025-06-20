@@ -34,7 +34,7 @@ https://harutyunyanarpi.github.io/Crypto-Trading-App/
 
 - No backend integration: trade history, user data, and real persistence are not supported
 - No JWT or session tokens: authentication is simplified, reducing security realism
-- React Query is used without custom retry or error handling configuration initially
+- React Query is used without custom retry handling configuration initially
 - Swap and conversion logic may float slightly due to JS precision
 
 ---
@@ -75,7 +75,7 @@ src/
 ├── utils/            # Utils for the app
 ├── enums/            # All the global enums
 ├── types/            # All the global types
-├── types/            # All the global styles
+├── styles/            # All the global styles
 ├── App.tsx
 ├── main.tsx
 ```
@@ -86,17 +86,20 @@ src/
 
 ```bash
 # 1. Clone the repo
-git clone 
+git clone https://github.com/harutyunyanArpi/Crypto-Trading-App.git
 cd crypto-trading-app
 
 # 2. Install dependencies
 npm install
 
-# 3. Run the dev server
+# 3. Create a .env file
+cp .env.example .env
+
+# 4. Run the dev server
 npm run dev
-```
 
 Visit `http://localhost:5173` to view the app.
+
 
 ---
 
