@@ -107,9 +107,9 @@ Visit `http://localhost:5173` to view the app.
 
 1. **Log In** with any email
 2. On **Home Page**:
-   - View top 10 assets
+   - View 10 assets
    - Sort by name or price
-   - Show more assets
+   - Load more assets
    - Use Buy/Sell dropdown
 3. On **Trade Page**:
    - Convert crypto ⇄ fiat
@@ -117,6 +117,7 @@ Visit `http://localhost:5173` to view the app.
    - Live rate updates
 
 ---
+
 
 ## Linting, Formatting, and Git Hooks
 
