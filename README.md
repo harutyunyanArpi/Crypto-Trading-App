@@ -39,8 +39,6 @@ https://harutyunyanarpi.github.io/Crypto-Trading-App/
 
 ---
 
----
-
 ## Tech Stack
 
 - React + TypeScript
